@@ -1,0 +1,78 @@
+Scene Build()
+{
+  Scene scene = new Scene();
+  scene.Size = new ImageSize(1024, 768);
+  
+  Camera camera = new Camera(new Point3(-14.0, 0.0, -5.0),   // Position
+							 new Point3(0.0, 1.0, 0.0),      // Look at
+							 Vector3.UnitY,                  // Up
+							 4.0,                            // Focal length
+							 scene.Size);                    // Aspect
+  scene.Camera = camera;
+  //scene.Antialias = true;
+  scene.Ambient = new Colour(0.5);
+  scene.Background = Colour.SkyBlue;
+
+  Light l = new Light(new Point3(-10.0, 2.0, -5.0),   // Position
+					  new Colour(1.0),                // Colour
+					  0.6);                           // Intensity
+  scene.Add(l);
+
+  Finish fin;
+  Pigment pig;
+  Material mat;
+  Solid so, si;
+  Transform t;
+  Point3 centre;
+  Solid outer;
+  Solid inner;
+
+  /////////////////////////////////////////////////////
+  fin = new Finish(0.5, 0.5, 0.5, 0.0);
+  pig = new Pigment(Colour.Beige, Colour.RosyBrown, RealFunctions.Perlin);
+  pig.Scale = 0.1;
+
+  mat = new Material(pig, fin);
+
+  t = new Transform();
+  centre = new Point3(0.4, 0.0, 0.0);
+
+  outer = new Sphere(centre, 0.200);
+  inner = new Sphere(centre, 0.195);
+  so = outer;  // Compiler can't see init of so
+
+  for(int k = 1; k < 100; k++)
+  {
+	so = new Sphere(centre, 0.200 + k / 80.0);
+
+	t.Rotate(Axis.Z, -5.0);
+	t.Scale(1.02);
+	so.Apply(t);
+
+	outer = new CSGUnion(outer, so);
+
+	if(k > 80)
+	{
+	  si = new Sphere(centre, 0.190 + k / 80.0);
+	  si.Apply(t);
+	  inner = new CSGUnion(inner, si);
+	}
+  }
+  Sphere sp = (so as Sphere);
+
+  Vector3 nml = new Vector3(0.210, 0.133, 0.000);
+  nml.Normalise();
+  Point3 pt = new Point3(sp.Centre.x, sp.Centre.y, 0.0);
+  si = new Plane(pt, nml);
+  nml = new Vector3(nml.y, -nml.x, 0.0);
+  so = new Plane(pt + (nml * sp.Radius), nml);
+
+  si = new CSGIntersection(si, so);
+  inner = new CSGUnion(inner, si);
+
+  inner.Bound = new Sphere(centre, 1.9);
+
+  scene.Add(new CSGDifference(outer, inner, mat));
+
+  return scene;
+}

@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Aurora.Camera" Collapsed="true">
+    <Position X="5.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAgAAAAAAAAAAIAAAgAACAACAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Scene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Scene" Collapsed="true">
+    <Position X="5.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>TAMCAQAAAwAQAAUIEAAkCAAAAAIAABQAAAAgAEwJIAE=</HashCode>
+      <FileName>Scene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.AuroraException" Collapsed="true">
+    <Position X="9.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Aggregate" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAAAAABAAAAAAAAAEAAAAAAAAAAAAAAABAAAIAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.CSG" Collapsed="true">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAABAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.CSGDifference" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAEAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.CSGIntersection" Collapsed="true">
+    <Position X="7" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAEAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.CSGModel" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEBAAAAAAAAAEAAAAAAAAAAAAABABAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.CSGUnion" Collapsed="true">
+    <Position X="8.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAEAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Cube" Collapsed="true">
+    <Position X="3.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Cuboid" Collapsed="true">
+    <Position X="3.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.CylinderX" Collapsed="true">
+    <Position X="10.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.CylinderY" Collapsed="true">
+    <Position X="12.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.CylinderZ" Collapsed="true">
+    <Position X="14" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Ellipsoid" Collapsed="true">
+    <Position X="10.5" Y="8.75" Width="1.5" />
+    <InheritanceLine Type="Aurora.Quadric" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.75" Y="3.88" />
+        <Point X="15.75" Y="8.375" />
+        <Point X="11.25" Y="8.375" />
+        <Point X="11.25" Y="8.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Finish" Collapsed="true">
+    <Position X="7.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAQAAAAAAAIAAgACAAIAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Material.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Hyperboloid" Collapsed="true">
+    <Position X="12.25" Y="8.75" Width="1.5" />
+    <InheritanceLine Type="Aurora.Quadric" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.75" Y="3.88" />
+        <Point X="15.75" Y="8.377" />
+        <Point X="13" Y="8.377" />
+        <Point X="13" Y="8.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.HyperboloidY" Collapsed="true">
+    <Position X="14" Y="8.75" Width="1.5" />
+    <InheritanceLine Type="Aurora.Quadric" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.75" Y="3.88" />
+        <Point X="15.75" Y="8.373" />
+        <Point X="14.688" Y="8.373" />
+        <Point X="14.688" Y="8.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.ImprovedNoise" Collapsed="true">
+    <Position X="7.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAIAAAAAAAAAAAAAAASAAAABAEAAAAAAAAA=</HashCode>
+      <FileName>Perlin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Intersection" Collapsed="true">
+    <Position X="3.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAKAAgECAEAAAABAAAgAgAAMAIA=</HashCode>
+      <FileName>Intersection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.IntersectionList" Collapsed="true">
+    <Position X="3.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAIAAAAAAAAAAABAAAAAgAAAAAA=</HashCode>
+      <FileName>Intersection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Light" Collapsed="true">
+    <Position X="5.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAIAAAAKAAAACIAAAACBABAAAAA=</HashCode>
+      <FileName>Light.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Material" Collapsed="true">
+    <Position X="7.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QEBAAEQAgAAAQAICgggAUBAAAFAAIAAAAEABCAgAAAA=</HashCode>
+      <FileName>Material.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Matrix" Collapsed="true">
+    <Position X="3.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAACE6AMAAAAAAAAAAIAAAgAAAAgAAAA=</HashCode>
+      <FileName>Maths.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Aurora.Model" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAEABAAAAAAAAAEAAAAAAAIAAAAAAADAABAAgA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.ParaboloidX" Collapsed="true">
+    <Position X="10.5" Y="7" Width="1.5" />
+    <InheritanceLine Type="Aurora.Quadric" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.75" Y="3.88" />
+        <Point X="15.75" Y="6.557" />
+        <Point X="11.284" Y="6.557" />
+        <Point X="11.284" Y="7" />
+        <Point X="11.312" Y="7" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.ParaboloidY" Collapsed="true">
+    <Position X="12.25" Y="7" Width="1.5" />
+    <InheritanceLine Type="Aurora.Quadric" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.75" Y="3.88" />
+        <Point X="15.75" Y="6.557" />
+        <Point X="13" Y="6.557" />
+        <Point X="13" Y="7" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.ParaboloidZ" Collapsed="true">
+    <Position X="14" Y="7" Width="1.5" />
+    <InheritanceLine Type="Aurora.Quadric" FixedToPoint="true">
+      <Path>
+        <Point X="15.75" Y="3.88" />
+        <Point X="15.75" Y="6.557" />
+        <Point X="14.75" Y="6.557" />
+        <Point X="14.75" Y="7" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.PerlinOctaves" Collapsed="true">
+    <Position X="7.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Functions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Pigment" Collapsed="true">
+    <Position X="7.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAIAAAACQAAAAAAgAQAAAAAAAEA=</HashCode>
+      <FileName>Material.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Plane" Collapsed="true">
+    <Position X="11" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEEBAAAAAAAAAEAAgCAAAIAAAEAAABAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Quadric" Collapsed="true">
+    <Position X="15" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEEBAAAAgAAAAEAAAAAAAAAAAAAAADAAAgAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.RealFunctions" Collapsed="true">
+    <Position X="5.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAEAAAgQCAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Functions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Solid" Collapsed="true">
+    <Position X="15" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAECAAEAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Sphere" Collapsed="true">
+    <Position X="13" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAIAAAUGBAAAAAAAAAEAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Transform" Collapsed="true">
+    <Position X="3.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAABAAAAAAAAIAAAAAEAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Maths.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.Triangle" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAEABAABEAAAAAEAAAAAAAAAgAAAAABAAAAAAg=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.VectorFunctions" Collapsed="true">
+    <Position X="7" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Functions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.VectorPerlinOctaves" Collapsed="true">
+    <Position X="7.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Functions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.ConeZ" Collapsed="true">
+    <Position X="14" Y="10.25" Width="1.5" />
+    <InheritanceLine Type="Aurora.Quadric" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.75" Y="3.88" />
+        <Point X="15.75" Y="9.797" />
+        <Point X="14.75" Y="9.797" />
+        <Point X="14.75" Y="10.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.ConeY" Collapsed="true">
+    <Position X="12.25" Y="10.25" Width="1.5" />
+    <InheritanceLine Type="Aurora.Quadric" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.75" Y="3.88" />
+        <Point X="15.75" Y="9.797" />
+        <Point X="13" Y="9.797" />
+        <Point X="13" Y="10.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aurora.ConeX" Collapsed="true">
+    <Position X="10.5" Y="10.25" Width="1.5" />
+    <InheritanceLine Type="Aurora.Quadric" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.75" Y="3.88" />
+        <Point X="15.75" Y="9.797" />
+        <Point X="11.25" Y="9.797" />
+        <Point X="11.25" Y="10.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Aurora.Point3" Collapsed="true">
+    <Position X="3.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEYAUAAAAAAAAABAAAAABkAQgAAAA=</HashCode>
+      <FileName>Maths.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Aurora.Ray" Collapsed="true">
+    <Position X="3.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAIAAAAGAAAABAAACAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Maths.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Aurora.Vector3" Collapsed="true">
+    <Position X="3.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIgAAAAAAAAAEYAEAQAAAAQIAAAAAAgBkAwAAAAA=</HashCode>
+      <FileName>Maths.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Aurora.Constant" Collapsed="true">
+    <Position X="5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAQAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Maths.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Aurora.Colour" Collapsed="true">
+    <Position X="5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>c/o+AYRdQXu0I7O24RsQV3WRFIBxxgSLiLRtnTUZl4E=</HashCode>
+      <FileName>Maths.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="Aurora.Axis" Collapsed="true">
+    <Position X="5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAE=</HashCode>
+      <FileName>Maths.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Aurora.RealFunction" Collapsed="true">
+    <Position X="5.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Functions.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Aurora.VectorFunction" Collapsed="true">
+    <Position X="7" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Functions.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

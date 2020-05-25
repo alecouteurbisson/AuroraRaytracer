@@ -1,0 +1,55 @@
+Scene Build()
+{
+  Scene scene = new Scene();
+  scene.Size = new ImageSize(1024, 768);
+  
+  Camera camera = new Camera(new Point3(1.0, 2.0, -15.0),    // Position
+							 Point3.Origin,                  // Look at
+							 Vector3.UnitY,                  // Up
+							 4.0,                            // Focal length
+							 scene.Size); 					 // Aspect
+
+  scene.Camera = camera;
+  scene.Antialias = true;
+  scene.Ambient = new Colour(0.2);
+
+  Light l = new Light(new Point3(-1.0, -2.0, -10.0), // Position
+					  new Colour(1.0),               // Colour
+					  0.3);                          // Intensity
+  scene.Add(l);
+
+		l = new Light(new Point3(1.0, 5.0, -10.0),   // Position
+					  new Colour(1.0),               // Colour
+					  0.3);                          // Intensity
+  scene.Add(l);
+
+  // A transparent sphere
+  Finish glassfinish = new Finish(0.0, 0.1, 0.1, 0.3);
+  Pigment black = new Pigment(Colour.Black);
+  Material glass = new Material(black, glassfinish);
+  glass.MakeTransparent(new Colour(0.8, 0.9, 1.0), 1.5);
+  // glass.PerturbNormal(1.0, 0.1, VectorFunctions.Perlin);
+  Solid s = new Sphere(new Point3(-1.4, 1.0, 0.0), 2.5, glass);
+  scene.Add(s);
+
+  // A strange textured Sphere
+  Pigment blueSmoke = new Pigment(Colour.PeachPuff, Colour.CadetBlue,
+								  RealFunctions.PerlinRidged);
+  blueSmoke.Scale = 0.3;
+  Finish f = new Finish(0.8, 0.4, 0.1, 0.0);
+  Material mr = new Material(blueSmoke, f);
+  mr.PerturbNormal(0.1, 0.2, VectorFunctions.Perlin);
+  s = new Sphere(new Point3(2.0, -1.0, -3.0), 1.5, mr);
+  scene.Add(s);
+
+  // A checkered plane
+  Pigment chex = new Pigment(new Colour(0.0), new Colour(1.0), RealFunctions.Checker);
+  // Surface finish - diffuse, specular, phongsize, reflectance
+  Finish finish = new Finish(0.6, 0.6, 0.1, 0.0);
+  Material mat = new Material(chex, finish);
+  Plane p = new Plane(new Point3(0.0, 0.0, 5.001), -Vector3.UnitZ, mat);
+  scene.Add(p);
+
+  scene.Gamma = 1.2;
+  return scene;
+}

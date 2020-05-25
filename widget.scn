@@ -1,0 +1,78 @@
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+
+// Required scene builder function
+Scene Build()
+{
+  Scene scene = new Scene();
+  scene.Size = new ImageSize(1024, 768);
+  
+  Camera camera = new Camera(new Point3(12.0, -6.0, -20.0),
+                             new Point3(12.0, -6.0, 0.0),
+                             Vector3.UnitY,
+                             1.0,                           // Short focal length
+                             scene.Size);
+  scene.Camera = camera;
+  scene.Antialias = true;
+
+  Light l = new Light(new Point3(7.0, 7.0, -7.0),    // Position
+                      new Colour(1.0),               // Colour
+                      1.0);                          // Intensity
+  scene.Add(l);
+
+  Pigment orange = new Pigment(Colour.Orange);
+  Finish fin = new Finish(0.3, 0.4, 10.0, 0.5);
+  Material mat = new Material(orange, fin);
+
+  GraphicsPath path = new GraphicsPath();
+  FontFamily ff = new FontFamily("Celtic Knots");
+  path.AddString("QWE\r\nASD\r\nZXC", ff, 0, 10f, new Point(0, 0), StringFormat.GenericTypographic);
+  path.Flatten();
+  PointF[] pts = path.PathData.Points;
+  byte[] cmds = path.PathData.Types;
+
+  PointF closeTo = pts[0];
+  for(int i = 1; i < pts.Length + 1; i++)
+  {
+    Solid c;
+    if(cmds[i - 1] > 127)
+    {
+      c = Cylinder(new Point3((double)closeTo.X, 8 - (double)closeTo.Y, 0.0), new Point3((double)pts[i - 1].X, 8 - (double)pts[i - 1].Y, 0.0), 0.3);
+      if(i < pts.Length)
+        closeTo = pts[i];
+    }
+    else
+    {
+      c = Cylinder(new Point3((double)pts[i].X, 8 - (double)pts[i].Y, 0.0), new Point3((double)pts[i - 1].X, 8 - (double)pts[i - 1].Y, 0.0), 0.3);
+    }
+    if(c != null)
+    {
+      c.Material = mat;
+      scene.Add(c);
+    }
+    if(i < pts.Length)
+      scene.Add(new Sphere(new Point3((double)pts[i].X, 8 - (double)pts[i].Y, 0.0), 0.3, mat));
+  }
+  
+  return scene;
+}
+
+private Solid Cylinder(Point3 a, Point3 b, double diameter)
+{
+  Solid c = new CylinderX(diameter, diameter);
+  Transform t = new Transform();
+  Vector3 along = b - a;
+  if(along.Norm() < 0.001)
+    return null;
+  double angle = Math.Atan2(b.y - a.y, b.x - a.x) * 180.0 / Math.PI;
+  t.Rotate(Axis.Z, -angle);
+  t.Translate(a);
+  c.Apply(t);
+  Plane p1 = new Plane(a, -along);
+  Plane p2 = new Plane(b, along);
+
+  c = c & p1;
+  c = c & p2;
+  return c;
+}

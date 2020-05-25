@@ -1,0 +1,59 @@
+// using declarations and user defined types
+
+// Required scene builder function
+Scene Build()
+{ 
+  Scene scene = new Scene();
+  scene.Size = new ImageSize(1024, 768);
+  
+  Camera camera = new Camera(new Point3(0.0, 10.0, -30.0),    // Position
+               Point3.Origin,                               // Look at
+               Vector3.UnitY,                               // Up
+               4.0,                                         // Focal length
+               scene.Size);                                 // Aspect
+
+  scene.Camera = camera;
+  scene.Antialias = true;
+  scene.Ambient = new Colour(0.2);
+
+  Light l = new Light(new Point3(4.0, 4.0, -10.0), // Position
+            new Colour(1.0),                       // Colour
+            0.3);                                  // Intensity
+  scene.Add(l);
+
+  // Create Scene elements here
+
+  Pigment pig = new Pigment(Colour.Orange, Colour.Lime, RealFunctions.Perlin);
+  pig.Scale = 0.1;
+  Finish fin = new Finish(0.7, 0.3, 1.0, 0.0);
+  Material mat = new Material(pig, fin);
+      
+  double R = 5.0;
+  double r = 1.0;
+  
+  Sphere s;
+  
+  for(int i = 0; i < 120; i++)
+  {
+    double theta = 360.0 / 60.0 * i;
+    double phi = theta * 1.5;
+    
+    Transform t = new Transform(); 
+    t.Translate(r, 0.0, 0.0);
+    t.Rotate(Axis.Y, phi);
+    t.Translate(R, 0.0, 0.0);
+    t.Rotate(Axis.Z, theta);
+       
+    Point3 c = Point3.Origin * t;
+    s = new Sphere(c, 0.5, mat);
+    scene.Add(s);
+  }
+  
+  s = new Sphere(Point3.Origin, 0.5, mat);
+  scene.Add(s);
+    
+  // Return the complete scene
+  return scene;
+}
+
+// Other functions as needed
